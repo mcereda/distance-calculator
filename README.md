@@ -8,7 +8,7 @@ User must specify units for both **and** a return unit for their sum.
 
 1. [] create the webapp - python + flask
 
-   1. [] create basic working version
+   1. [X] create basic working version
    1. [] fix to adhere to the goals
 
 1. [] dockerize the app

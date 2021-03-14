@@ -11,6 +11,12 @@ def total_distance():
     distance1_unit = request.args.get('distance1_unit', default='m', type=str)
     distance2_unit = request.args.get('distance2_unit', default='m', type=str)
     return_unit = request.args.get('return_unit', default='m', type=str)
+
+    if distance1_unit != 'm' or distance2_unit != 'm' or return_unit != 'm':
+        return jsonify(
+            message = 'unit non supported',
+            supported_units = 'm',
+        ), 409
     
     total_distance = distance1 + distance2
 
